@@ -1,46 +1,79 @@
-# Getting Started with Create React App
+# Demo
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Theme
 
-## Available Scripts
+```json
+{
+  "name": {
+    "type": "string",
+    "fontSize": 40,
+    "fontWeight": "bold",
+    "margin": "20px 0px 15px"
+  },
+  "description": {
+    "title": {
+      "type": "string",
+      "fontSize": 40,
+      "fontWeight": "bold",
+      "margin": "20px 0px 15px"
+    },
+    "content": {
+      "type": "html"
+    }
+  },
+  "price": {
+    "type": "number"
+  },
+  "action": {
+    "type": "button",
+    "backgroundColor": "#d1006c",
+    "color": "white",
+    "borderRadius": 4,
+    "width": 200,
+    "height": 40,
+    "textTransform": "none",
+    "margin": "5px 5px"
+  }
+}
+```
 
-In the project directory, you can run:
+## Product
 
-### `yarn start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+```json
+{
+  "name": "This is product name",
+  "description": {
+    "title": "This is product description",
+    "content": "<p><strong>Lorem Ipsum</strong> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p><p><img src='https://www.cnet.com/a/img/yo0j9mvUs0WmG8QHtoZIRuV4IYc=/1200x675/2021/03/29/1c2386e1-53b8-4a19-803d-08abd7ffe77e/floom.jpg' alt='' style='width: 300px;'></p><p><br></p><p><div><h2>Why do we use it?</h2><p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p></div></p><p><h2>Services</h2><table style='width: 100%;'><tbody><tr><td style='width: 30.8661%;'>Where does it come from</td><td style='width: 68.9764%;'>Contrary to popular belief, Lorem Ipsum is not simply random text</td></tr><tr><td style='width: 30.8661%;'>Where can I get some</td><td style='width: 68.9764%;'>There are many variations of passages of Lorem Ipsum available</td></tr><tr><td style='width: 30.8661%;'>Others</td><td style='width: 68.9764%;'>Others<br></td></tr></tbody></table><p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p></p><p><br></p>"
+  },
+  "services": [],
+  "price": 0,
+  "actions": [
+    {
+      "name": "Action 1",
+      "link": "https://google.com",
+      "enable": true
+    },
+    {
+      "name": "Action 2",
+      "link": "https://google.com",
+      "enable": false
+    },
+    {
+      "name": "Action 3",
+      "link": "https://google.com",
+      "enable": true
+    },
+    {
+      "name": "Action 4",
+      "link": "https://google.com",
+      "enable": true
+    },
+    {
+      "name": "Downloads",
+      "link": "https://google.com",
+      "enable": true
+    }
+  ]
+}
+```

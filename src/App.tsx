@@ -1,10 +1,11 @@
-import { Button, Grid, Switch, TextField } from "@material-ui/core";
+import { Grid, Switch, TextField } from "@material-ui/core";
 import { makeStyles, Theme } from "@material-ui/core/styles";
 import React from "react";
 import "./App.css";
 import Group from "./components/Group";
 import HTMLEditor from "./components/HTMLEditor";
 import productDetailExample from "./example/product-detail";
+import { ProductPreview } from "./ProductPreview";
 
 const useStyles = makeStyles((theme: Theme) => ({
   root: {
@@ -24,45 +25,8 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
 }));
 
-const clientStyles = makeStyles((theme: Theme) => ({
-  root: {
-    width: "100%",
-    height: "auto",
-    display: "flex",
-    flexDirection: "column",
-    padding: 10,
-    border: "1px solid gray",
-    borderRadius: 5,
-  },
-  container: {
-    padding: theme.spacing(5),
-    width: "100%",
-    // height: "100%",
-  },
-  productTitle: {
-    // fontWeight: "bold",
-    // fontSize: 40,
-    margin: "20px 0px 15px",
-  },
-  sectionTitle: {
-    // fontWeight: "bold",
-    // fontSize: 30,
-    margin: "20px 0px 15px",
-  },
-  actionButton: {
-    backgroundColor: "#d1006c",
-    borderRadius: 4,
-    width: 200,
-    height: 40,
-    color: "white",
-    textTransform: "none",
-    margin: "5px 5px",
-  },
-}));
-
 function App() {
   const classes = useStyles();
-  const clientClasses = clientStyles();
 
   const [productDetail, setProductDetail] = React.useState<{
     name: string;
@@ -161,7 +125,6 @@ function App() {
 
   React.useEffect(() => {
     const product = JSON.stringify(productDetail);
-    console.log("product: ", product);
   }, [productDetail]);
 
   return (
@@ -236,37 +199,7 @@ function App() {
 
       <Grid item xs={12} md={6}>
         <div className={classes.container}>
-          <div className={clientClasses.root}>
-            <h1 className={clientClasses.productTitle}>{productDetail.name}</h1>
-            {productDetail.description.title && (
-              <h3 className={clientClasses.sectionTitle}>
-                {productDetail.description.title}
-              </h3>
-            )}
-            {productDetail.description.content && (
-              <div
-                dangerouslySetInnerHTML={{
-                  __html: productDetail.description.content,
-                }}
-              ></div>
-            )}
-            <div style={{ marginTop: 20 }}>
-              <Grid container alignItems="center" justify="center">
-                {productDetail.actions.map((action) =>
-                  action.enable ? (
-                    <Grid item key={action.name}>
-                      <Button
-                        href={action.link}
-                        className={clientClasses.actionButton}
-                      >
-                        {action.name}
-                      </Button>
-                    </Grid>
-                  ) : null
-                )}
-              </Grid>
-            </div>
-          </div>
+          <ProductPreview productDetail={productDetail} />
         </div>
       </Grid>
     </Grid>
