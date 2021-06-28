@@ -28,12 +28,12 @@ export const ProductPreview = React.memo((props: Props) => {
   return (
     <div className={clientClasses.root}>
       {/* @ts-ignore */}
-      <Typography style={productDetailTheme.name}>
+      <Typography style={productDetailTheme["01"]}>
         {productDetail.name}
       </Typography>
       {productDetail.description.title && (
         // @ts-ignore
-        <Typography style={productDetailTheme.description.title}>
+        <Typography style={productDetailTheme["02"]}>
           {productDetail.description.title}
         </Typography>
       )}
@@ -51,7 +51,7 @@ export const ProductPreview = React.memo((props: Props) => {
               action.enable ? (
                 <Grid item key={action.name}>
                   {/* @ts-ignore */}
-                  <Button href={action.link} style={productDetailTheme.action}>
+                  <Button href={action.link} style={productDetailTheme["05"]}>
                     {action.name}
                   </Button>
                 </Grid>

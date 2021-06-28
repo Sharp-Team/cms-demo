@@ -1,26 +1,25 @@
 const productDetailThemeJson = `
 {
-  "name":{
+  "01":{
      "type":"string",
      "fontSize":40,
+     "color": "red",
      "fontWeight":"bold",
      "margin":"20px 0px 15px"
   },
-  "description":{
-     "title":{
-        "type":"string",
-        "fontSize":40,
-        "fontWeight":"bold",
-        "margin":"20px 0px 15px"
-     },
-     "content":{
-        "type":"html"
-     }
-  },
-  "price":{
+   "02":{
+      "type":"string",
+      "fontSize":40,
+      "fontWeight":"bold",
+      "margin":"20px 0px 15px"
+   },
+   "03":{
+      "type":"html"
+   },
+  "04":{
      "type":"number"
   },
-  "action":{
+  "05":{
      "type":"button",
      "backgroundColor":"#d1006c",
      "color":"white",
